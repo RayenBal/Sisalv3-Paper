@@ -1,0 +1,5 @@
+proxy,unit,n_samples,model,RMSE_model,MAE_model,MdAE_model,RMSE_LI,MAE_LI,MdAE_LI
+d18O,permil VPDB,2033,CatBoost,0.441,0.3276,0.2478,0.469,0.3325,0.2278
+d13C,permil VPDB,2033,CatBoost,0.8943,0.6041,0.3979,0.897,0.6319,0.437
+Mg/Ca,mmol/mol,2033,CatBoost,1.79,0.9259,0.3212,1.8658,0.8586,0.214
+Sr/Ca,mmol/mol,2033,XGBoost,0.0567,0.0213,0.0039,0.0722,0.0253,0.0047

@@ -1,0 +1,5 @@
+proxy,n,wins,p_raw,p_bonferroni,significant
+d18O,45,20,0.4948,1.0,False
+d13C,45,21,0.4737,1.0,False
+Mg/Ca,45,19,0.5991,1.0,False
+Sr/Ca,45,25,0.2296,0.9183,False

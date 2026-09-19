@@ -1,0 +1,73 @@
+{
+  "run_id_loco": "20260616T224121Z",
+  "run_id_within_cave": "20260612T233845Z",
+  "n_samples": 18004,
+  "n_cave_sites": 41,
+  "n_input_features": 36,
+  "targets": [
+    "d18O_measurement",
+    "d13C_measurement",
+    "Mg_Ca_measurement",
+    "Sr_Ca_measurement"
+  ],
+  "models_evaluated": [
+    "RandomForest",
+    "XGBoost",
+    "CatBoost",
+    "BiLSTM",
+    "Transformer"
+  ],
+  "loco_n_folds": 41,
+  "within_cave_n_folds": 46,
+  "within_cave_block_fraction": 0.1,
+  "within_cave_min_block_samples": 30,
+  "random_seed": 42,
+  "external_datasets": {
+    "WorldClim_v2.1": {
+      "reference": "Fick & Hijmans (2017)",
+      "variables": [
+        "wc_bio1",
+        "wc_bio2",
+        "wc_bio3",
+        "wc_bio4",
+        "wc_bio5",
+        "wc_bio6",
+        "wc_bio7",
+        "wc_bio8",
+        "wc_bio9",
+        "wc_bio10",
+        "wc_bio11",
+        "wc_bio12",
+        "wc_bio13",
+        "wc_bio14",
+        "wc_bio15",
+        "wc_bio16",
+        "wc_bio17",
+        "wc_bio18",
+        "wc_bio19"
+      ],
+      "resolution": "1 km",
+      "join_key": "site_id (lat/lon coordinates)"
+    },
+    "Bowen_Wilkinson_isoscape": {
+      "reference": "Bowen & Wilkinson (2002)",
+      "variable": "precip_d18o_bw02",
+      "description": "Mean annual precipitation delta18O",
+      "join_key": "site_id (lat/lon coordinates)"
+    }
+  },
+  "feature_engineering": [
+    "log_depth_sample = log1p(depth_sample)",
+    "age_sin = sin(2*pi*interp_age/21000)",
+    "age_cos = cos(2*pi*interp_age/21000)",
+    "abs_latitude = abs(latitude)",
+    "hemisphere = N if latitude >= 0 else S",
+    "lat_band = tropical/subtropical/temperate"
+  ],
+  "excluded_columns": [
+    "Sr_isotopes_measurement (99.8% missing)",
+    "interp_age_uncert_pos/neg (64.5% missing)",
+    "sample_id, entity_id, site_id, site_name (identifiers)",
+    "is_hiatus, is_gap (flags)"
+  ]
+}

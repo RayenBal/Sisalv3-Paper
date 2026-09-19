@@ -1,0 +1,5 @@
+proxy,unit,n_folds,LI_median_rmse,LI_iqr_low,LI_iqr_high,model_median_rmse,model_iqr_low,model_iqr_high
+d18O,permil VPDB,45,0.3175,0.2302,0.4863,0.3963,0.2586,0.5089
+d13C,permil VPDB,45,0.6977,0.3804,0.9387,0.6767,0.4707,0.9721
+Mg/Ca,mmol/mol,45,0.5049,0.1188,1.3974,0.8492,0.2228,1.5984
+Sr/Ca,mmol/mol,45,0.0076,0.0038,0.0208,0.0082,0.0032,0.0165
