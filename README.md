@@ -59,7 +59,15 @@ The two protocols bound the practical use case at either end. Under LOCO, standa
 ```
 
 ---
+## Web application
 
+An interactive tool applying the trained models is available at:
+
+**https://sisal-gap-filler.vercel.app/**
+
+It accepts datasets in SISALv3 format for δ¹⁸O, δ¹³C, Mg/Ca and Sr/Ca, and provides model comparison and automated imputation. Serialized models are in `/models/`.
+
+---
 ## Data
 
 ### Primary source
