@@ -1,6 +1,8 @@
 # Bridging Gaps in Paleoclimatological Records: Insights from AI on Speleothem Data
 
-Code, processed data, and results accompanying the manuscript submitted to *Ecological Informatics*.
+Code, processed data, and results accompanying a manuscript submitted to *Ecological Informatics*.
+
+*This repository is anonymized for peer review. Author, affiliation, and identifying resource links are withheld and will be provided upon acceptance.*
 
 This repository contains the pipeline used to evaluate machine learning and deep learning approaches to imputing missing geochemical proxy measurements in speleothem records, using the SISALv3 database enriched with external climate covariates.
 
@@ -59,15 +61,7 @@ The two protocols bound the practical use case at either end. Under LOCO, standa
 ```
 
 ---
-## Web application
 
-An interactive tool applying the trained models is available at:
-
-**https://sisal-gap-filler.vercel.app/**
-
-It accepts datasets in SISALv3 format for δ¹⁸O, δ¹³C, Mg/Ca and Sr/Ca, and provides model comparison and automated imputation. Serialized models are in `/models/`.
-
----
 ## Data
 
 ### Primary source
@@ -192,21 +186,20 @@ An interactive tool applying the trained models is available at:
 
 **https://sisal-gap-filler.vercel.app/**
 
-It accepts datasets in SISALv3 format for δ¹⁸O, δ¹³C, Mg/Ca and Sr/Ca, and provides model comparison and automated imputation.
+It accepts datasets in SISALv3 format for δ¹⁸O, δ¹³C, Mg/Ca and Sr/Ca, and provides model comparison and automated imputation. Serialized models are in `/models/`.
+
 
 ---
 
 ## Supplementary data
 
-Cave site details, hyperparameter configurations, training procedure documentation, and the processed dataset are archived at:
-
-**https://doi.org/10.5522/04/31097830**
+Cave site details, hyperparameter configurations, training procedure documentation, and the processed dataset are archived in a public repository. The DOI is withheld during review and will be provided upon acceptance.
 
 ---
 
 ## Citation
 
-> Altaweel, M., Khelifi, A., Balghouthi, M. R., Khelif, S., Paine, A., & Fleitmann, D. (submitted). *Bridging Gaps in Paleoclimatological Records: Insights from AI on Speleothem Data*. Ecological Informatics.
+Full citation details to be provided upon acceptance.
 
 Please also cite SISALv3 (Kaushal et al., 2024), WorldClim v2.1 (Fick & Hijmans, 2017), and the Bowen–Wilkinson isoscape (Bowen & Wilkinson, 2002) as appropriate.
 
@@ -215,6 +208,13 @@ Please also cite SISALv3 (Kaushal et al., 2024), WorldClim v2.1 (Fick & Hijmans,
 ## License
 
 Code is released under the MIT License. SISALv3 data are subject to the licence terms of the original database.
+
+---
+
+## Contact
+
+Contact details to be provided upon acceptance.
+
 
 ---
 
