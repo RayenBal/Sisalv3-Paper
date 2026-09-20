@@ -215,9 +215,3 @@ Code is released under the MIT License. SISALv3 data are subject to the licence 
 
 Contact details to be provided upon acceptance.
 
-
----
-
-## Contact
-
-Correspondence regarding the manuscript: **Mark Altaweel**, Institute of Archaeology, University College London — m.altaweel@ucl.ac.uk
