@@ -14,6 +14,15 @@ two leakage-free protocols:
 - **Within-cave block gap (WCBG, 46 folds):** predicting a contiguous block withheld from a measured record, with the
   rest of the record available for training.
 
+## Links
+
+- **Web application:** [sisal-gap-filler.vercel.app](https://sisal-gap-filler.vercel.app/), which applies the models
+  to user-uploaded records in the SISALv3 data format (δ¹⁸O, δ¹³C, Mg/Ca and Sr/Ca).
+- **Executable pipeline (Google Colab):**
+  [colab.research.google.com/drive/1atEH9BtugzpgECEe2KCu43mhFWL4hoDG](https://colab.research.google.com/drive/1atEH9BtugzpgECEe2KCu43mhFWL4hoDG)
+- **Supplementary data** (data selection and cleaning, caves, hyper-parameters, training procedure, website details):
+  [doi.org/10.5522/04/31097830](https://doi.org/10.5522/04/31097830)
+
 ## Repository layout
 
 ```
