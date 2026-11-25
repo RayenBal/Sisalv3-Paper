@@ -1,0 +1,326 @@
+====================================================================================================
+SISAL REVISION — SUPPLEMENT BUILD REPORT (notebook 3/3)
+generated: 2026-11-15 16:51:20.790124+00:00
+output folder: /content/drive/MyDrive/SISALv3_Speleothem/artifacts/revision_2026_11/supplement
+====================================================================================================
+
+### 0_inputs_missing
+none
+
+### 1_wcbg_reproduction (rebuilt, published)
+  CatBoost/Mg/Ca: (0.958, 0.958)
+  CatBoost/Sr/Ca: (0.985, 0.985)
+  CatBoost/d13C: (0.917, 0.917)
+  CatBoost/d18O: (0.977, 0.977)
+  RandomForest/Mg/Ca: (0.925, 0.925)
+  RandomForest/Sr/Ca: (0.981, 0.981)
+  RandomForest/d13C: (0.913, 0.913)
+  RandomForest/d18O: (0.971, 0.971)
+  XGBoost/Mg/Ca: (0.941, 0.941)
+  XGBoost/Sr/Ca: (0.987, 0.987)
+  XGBoost/d13C: (0.906, 0.906)
+  XGBoost/d18O: (0.974, 0.974)
+
+### 2a_table2_LI_versions
+proxy                                                  method    n    R2  RMSE  RMSE_IQR   MAE  MdAE
+ δ¹⁸O       Model (CatBoost), all samples [Table 2 model row] 2098 0.977 0.449 0.26–0.52 0.335 0.253
+ δ¹⁸O                LI by sample order [published R² source] 2098 0.969 0.526 0.23–0.50 0.362 0.236
+ δ¹⁸O LI against depth [published RMSE/MAE/MdAE/tests source] 2033 0.976 0.469 0.23–0.49 0.332 0.228
+ δ¹⁸O    LI against age, all samples [PROPOSED single LI row] 2098 0.968 0.531 0.25–0.50 0.364 0.242
+ δ¹³C       Model (CatBoost), all samples [Table 2 model row] 2098 0.917 0.888 0.47–0.97 0.602 0.401
+ δ¹³C                LI by sample order [published R² source] 2098 0.915 0.899 0.39–0.94 0.636 0.448
+ δ¹³C LI against depth [published RMSE/MAE/MdAE/tests source] 2033 0.917 0.897 0.38–0.94 0.632 0.437
+ δ¹³C    LI against age, all samples [PROPOSED single LI row] 2098 0.915 0.894 0.39–0.91 0.624 0.429
+Mg/Ca       Model (CatBoost), all samples [Table 2 model row] 2098 0.958 1.839 0.23–1.65 0.968 0.342
+Mg/Ca                LI by sample order [published R² source] 2098 0.956 1.889 0.12–1.48 0.897 0.232
+Mg/Ca LI against depth [published RMSE/MAE/MdAE/tests source] 2033 0.951 1.866 0.12–1.40 0.859 0.214
+Mg/Ca    LI against age, all samples [PROPOSED single LI row] 2098 0.956 1.897 0.14–1.92 0.910 0.245
+Sr/Ca        Model (XGBoost), all samples [Table 2 model row] 2098 0.987 0.058 0.00–0.02 0.023 0.004
+Sr/Ca                LI by sample order [published R² source] 2098 0.979 0.074 0.00–0.02 0.027 0.005
+Sr/Ca LI against depth [published RMSE/MAE/MdAE/tests source] 2033 0.980 0.072 0.00–0.02 0.025 0.005
+Sr/Ca    LI against age, all samples [PROPOSED single LI row] 2098 0.982 0.069 0.00–0.02 0.025 0.005
+
+### 2b_model_vs_LI_tests
+proxy    model                li  n_blocks model_wins  wilcoxon_p  wilcoxon_p_bonf  normalised_p_bonf  tost_p_bonf  equivalent_at_20pct
+ δ¹⁸O CatBoost depth [published]        45      20/45      0.4948           1.0000             0.9008       0.0225                 True
+ δ¹⁸O CatBoost    age [proposed]        46      19/46      0.6808           1.0000             1.0000       0.0107                 True
+ δ¹³C CatBoost depth [published]        45      21/45      0.4737           1.0000             1.0000       0.0003                 True
+ δ¹³C CatBoost    age [proposed]        46      22/46      0.7619           1.0000             1.0000       0.0001                 True
+Mg/Ca CatBoost depth [published]        45      19/45      0.5991           1.0000             0.0156       0.3331                False
+Mg/Ca CatBoost    age [proposed]        46      21/46      0.7784           1.0000             0.0487       0.2485                False
+Sr/Ca  XGBoost depth [published]        45      25/45      0.2296           0.9183             1.0000       0.7891                False
+Sr/Ca  XGBoost    age [proposed]        46      24/46      0.3738           1.0000             1.0000       0.5264                False
+
+### 2c_samples_dropped_by_depth_LI
+proxy  entity_id          site  held_out_samples  depth_missing_in_entity  entity_samples
+ δ¹⁸O        694 Botuverá cave                65                      644             644
+ δ¹³C        694 Botuverá cave                65                      644             644
+Mg/Ca        694 Botuverá cave                65                      644             644
+Sr/Ca        694 Botuverá cave                65                      644             644
+
+### 2d_LI_age_R2_by_proxy
+  δ¹⁸O: 0.968
+  δ¹³C: 0.915
+  Mg/Ca: 0.956
+  Sr/Ca: 0.982
+
+### 3_tuned_params_LOCO_vs_within_run
+       model target  identical differences
+RandomForest   d18O       True           -
+RandomForest   d13C       True           -
+RandomForest  Mg/Ca       True           -
+RandomForest  Sr/Ca       True           -
+     XGBoost   d18O       True           -
+     XGBoost   d13C       True           -
+     XGBoost  Mg/Ca       True           -
+     XGBoost  Sr/Ca       True           -
+    CatBoost   d18O       True           -
+    CatBoost   d13C       True           -
+    CatBoost  Mg/Ca       True           -
+    CatBoost  Sr/Ca       True           -
+
+### 4a_representativeness_counts
+  sites: 365
+  with_MgCa: 54
+  with_SrCa: 49
+  with_all4_same_samples: 43
+  cohort: 41
+
+### 5_figure6_panels
+   model proxy                     site  entity_id  block_samples  duration_yr  rmse_model  rmse_LI  nrmse_model  median_nrmse_all_blocks  band_coverage_in_block_pct
+      RF  δ¹⁸O              Kesang cave         17             55        20566      1.3059   1.2994        0.956                    0.956                        36.4
+      RF  δ¹³C                  Naharon        892             39          216      0.9560   0.7871        0.839                    0.832                        94.9
+      RF Mg/Ca               Cueva Rosa        751             30         5094      0.3116   0.1567        0.869                    0.865                       100.0
+      RF Sr/Ca Hüttenbläserschachthöhle        783             30          616      0.0539   0.1097        0.604                    0.612                       100.0
+ XGBoost  δ¹⁸O             Bigonda cave        884             41          265      0.3141   0.2627        0.809                    0.813                       100.0
+ XGBoost  δ¹³C          Gol-E-Zard cave        574             30           80      0.3848   0.3634        0.806                    0.796                       100.0
+ XGBoost Mg/Ca           Zoolithen cave        882             30           41      3.9837   5.5431        0.905                    0.903                        86.7
+ XGBoost Sr/Ca        Abaco Island cave        692             73         2398      0.2028   0.2091        0.715                    0.732                        39.7
+CatBoost  δ¹⁸O               Liang Luar        226             30          220      0.2123   0.2013        0.907                    0.885                       100.0
+CatBoost  δ¹³C             Villars cave         32             30        43071      1.0566   0.8695        0.814                    0.828                        86.7
+CatBoost Mg/Ca               Cueva Rosa        748             30         1850      0.4552   0.4941        0.959                    0.991                       100.0
+CatBoost Sr/Ca             Closani cave        390            160          442      0.0054   0.0042        1.052                    1.055                       100.0
+
+### 6_identical_blocks_across_12_files
+  RandomForest/d18O: True
+  XGBoost/d18O: True
+  CatBoost/d18O: True
+  RandomForest/d13C: True
+  XGBoost/d13C: True
+  CatBoost/d13C: True
+  RandomForest/Mg/Ca: True
+  XGBoost/Mg/Ca: True
+  CatBoost/Mg/Ca: True
+  RandomForest/Sr/Ca: True
+  XGBoost/Sr/Ca: True
+  CatBoost/Sr/Ca: True
+
+### 7_tuning_settings_recorded
+   run                           file  best_rmse arch_reused_from                                                              keys  n_halving_rounds
+  LOCO       BiLSTM_Mg_Ca_measurement        NaN d18O_measurement arch_reused_from,best_neg_rmse,best_params,best_rmse,model,target               NaN
+  LOCO       BiLSTM_Sr_Ca_measurement        NaN d18O_measurement arch_reused_from,best_neg_rmse,best_params,best_rmse,model,target               NaN
+  LOCO        BiLSTM_d13C_measurement        NaN d18O_measurement arch_reused_from,best_neg_rmse,best_params,best_rmse,model,target               NaN
+  LOCO        BiLSTM_d18O_measurement   2.154998              NaN                        best_params,best_rmse,history,model,target               NaN
+  LOCO     CatBoost_Mg_Ca_measurement  11.316309              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+  LOCO     CatBoost_Sr_Ca_measurement   0.286115              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+  LOCO      CatBoost_d13C_measurement   3.393404              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+  LOCO      CatBoost_d18O_measurement   2.342303              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+  LOCO RandomForest_Mg_Ca_measurement  12.055759              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+  LOCO RandomForest_Sr_Ca_measurement   0.252673              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+  LOCO  RandomForest_d13C_measurement   3.191934              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+  LOCO  RandomForest_d18O_measurement   2.305639              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+  LOCO  Transformer_Mg_Ca_measurement        NaN d18O_measurement arch_reused_from,best_neg_rmse,best_params,best_rmse,model,target               NaN
+  LOCO  Transformer_Sr_Ca_measurement        NaN d18O_measurement arch_reused_from,best_neg_rmse,best_params,best_rmse,model,target               NaN
+  LOCO   Transformer_d13C_measurement        NaN d18O_measurement arch_reused_from,best_neg_rmse,best_params,best_rmse,model,target               NaN
+  LOCO   Transformer_d18O_measurement   2.500401              NaN                        best_params,best_rmse,history,model,target               NaN
+  LOCO      XGBoost_Mg_Ca_measurement  12.874140              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+  LOCO      XGBoost_Sr_Ca_measurement   0.367835              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+  LOCO       XGBoost_d13C_measurement   3.315164              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+  LOCO       XGBoost_d18O_measurement   2.370641              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+within       BiLSTM_Mg_Ca_measurement        NaN d18O_measurement arch_reused_from,best_neg_rmse,best_params,best_rmse,model,target               NaN
+within       BiLSTM_Sr_Ca_measurement        NaN d18O_measurement arch_reused_from,best_neg_rmse,best_params,best_rmse,model,target               NaN
+within        BiLSTM_d13C_measurement        NaN d18O_measurement arch_reused_from,best_neg_rmse,best_params,best_rmse,model,target               NaN
+within        BiLSTM_d18O_measurement   2.214146              NaN                        best_params,best_rmse,history,model,target               NaN
+within     CatBoost_Mg_Ca_measurement  11.316309              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+within     CatBoost_Sr_Ca_measurement   0.286115              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+within      CatBoost_d13C_measurement   3.393404              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+within      CatBoost_d18O_measurement   2.342303              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+within RandomForest_Mg_Ca_measurement  12.055759              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+within RandomForest_Sr_Ca_measurement   0.252673              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+within  RandomForest_d13C_measurement   3.191934              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+within  RandomForest_d18O_measurement   2.305639              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+within  Transformer_Mg_Ca_measurement        NaN d18O_measurement arch_reused_from,best_neg_rmse,best_params,best_rmse,model,target               NaN
+within  Transformer_Sr_Ca_measurement        NaN d18O_measurement arch_reused_from,best_neg_rmse,best_params,best_rmse,model,target               NaN
+within   Transformer_d13C_measurement        NaN d18O_measurement arch_reused_from,best_neg_rmse,best_params,best_rmse,model,target               NaN
+within   Transformer_d18O_measurement   2.587943              NaN                        best_params,best_rmse,history,model,target               NaN
+within      XGBoost_Mg_Ca_measurement  12.874140              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+within      XGBoost_Sr_Ca_measurement   0.367835              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+within       XGBoost_d13C_measurement   3.315164              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+within       XGBoost_d18O_measurement   2.370641              NaN best_neg_rmse,best_params,best_rmse,model,n_halving_rounds,target               3.0
+
+### 7_run_config
+   run        file  fast_mode  n_random_search_iter  inner_cv_groupkfold_splits  dl_n_random_search_iter  random_seed  cyclical_period_kyr
+  LOCO config.json      False                    20                           5                        6           42                 21.0
+within config.json      False                    20                           5                        6           42                 21.0
+
+### table S_feature_ablation
+             Protocol Proxy        Model                  Variant  Folds  Pooled R²  Pooled RMSE  ΔR² vs all features Folds worse  Wilcoxon p (fold RMSE)
+   Leave-one-cave-out Mg/Ca     CatBoost    All features (re-run)     41     -0.483      11.4768                  NaN         NaN                     NaN
+   Leave-one-cave-out Mg/Ca     CatBoost   Without 21-kyr sin/cos     41     -0.461      11.3877                0.023       21/41                  0.9285
+   Leave-one-cave-out Mg/Ca     CatBoost Without interpolated age     41     -0.513      11.5912               -0.030        9/41                  0.0015
+   Leave-one-cave-out Mg/Ca     CatBoost  Without any age feature     41     -0.470      11.4235                0.014       12/41                  0.0079
+   Leave-one-cave-out Mg/Ca     CatBoost            Period 19 kyr     41     -0.488      11.4933               -0.004       16/41                  0.5294
+   Leave-one-cave-out Mg/Ca     CatBoost            Period 23 kyr     41     -0.467      11.4141                0.016       16/41                  0.3479
+   Leave-one-cave-out Mg/Ca     CatBoost            Period 41 kyr     41     -0.545      11.7130               -0.062       17/41                  0.2796
+   Leave-one-cave-out Mg/Ca     CatBoost           Period 100 kyr     41     -0.618      11.9845               -0.134       24/41                  0.5210
+   Leave-one-cave-out Sr/Ca RandomForest    All features (re-run)     41      0.545       0.3344                  NaN         NaN                     NaN
+   Leave-one-cave-out Sr/Ca RandomForest   Without 21-kyr sin/cos     41      0.557       0.3302                0.011       25/41                  0.4881
+   Leave-one-cave-out Sr/Ca RandomForest Without interpolated age     41      0.503       0.3495               -0.042       22/41                  0.8677
+   Leave-one-cave-out Sr/Ca RandomForest  Without any age feature     41      0.488       0.3547               -0.057       22/41                  0.8576
+   Leave-one-cave-out Sr/Ca RandomForest            Period 19 kyr     41      0.559       0.3292                0.014       23/41                  0.8677
+   Leave-one-cave-out Sr/Ca RandomForest            Period 23 kyr     41      0.544       0.3347               -0.001       25/41                  0.3964
+   Leave-one-cave-out Sr/Ca RandomForest            Period 41 kyr     41      0.529       0.3403               -0.016       22/41                  0.6721
+   Leave-one-cave-out Sr/Ca RandomForest           Period 100 kyr     41      0.550       0.3326                0.005       22/41                  0.5900
+   Leave-one-cave-out  d13C     CatBoost    All features (re-run)     41      0.129       2.9068                  NaN         NaN                     NaN
+   Leave-one-cave-out  d13C     CatBoost   Without 21-kyr sin/cos     41      0.101       2.9515               -0.027       20/41                  0.7486
+   Leave-one-cave-out  d13C     CatBoost Without interpolated age     41      0.112       2.9337               -0.016       24/41                  0.4333
+   Leave-one-cave-out  d13C     CatBoost  Without any age feature     41      0.164       2.8475                0.035       21/41                  0.9183
+   Leave-one-cave-out  d13C     CatBoost            Period 19 kyr     41      0.117       2.9260               -0.012       26/41                  0.2739
+   Leave-one-cave-out  d13C     CatBoost            Period 23 kyr     41      0.152       2.8682                0.023       23/41                  0.9387
+   Leave-one-cave-out  d13C     CatBoost            Period 41 kyr     41      0.124       2.9148               -0.005       24/41                  0.8778
+   Leave-one-cave-out  d13C     CatBoost           Period 100 kyr     41      0.136       2.8943                0.007       20/41                  0.5723
+   Leave-one-cave-out  d18O RandomForest    All features (re-run)     41      0.516       2.0487                  NaN         NaN                     NaN
+   Leave-one-cave-out  d18O RandomForest   Without 21-kyr sin/cos     41      0.505       2.0726               -0.011       21/41                  0.7486
+   Leave-one-cave-out  d18O RandomForest Without interpolated age     41      0.479       2.1264               -0.037       19/41                  0.8175
+   Leave-one-cave-out  d18O RandomForest  Without any age feature     41      0.485       2.1135               -0.031       19/41                  0.7292
+   Leave-one-cave-out  d18O RandomForest            Period 19 kyr     41      0.518       2.0451                0.002       18/41                  0.2411
+   Leave-one-cave-out  d18O RandomForest            Period 23 kyr     41      0.502       2.0798               -0.015       15/41                  0.1714
+   Leave-one-cave-out  d18O RandomForest            Period 41 kyr     41      0.521       2.0385                0.005       20/41                  0.4563
+   Leave-one-cave-out  d18O RandomForest           Period 100 kyr     41      0.521       2.0378                0.005       20/41                  0.8475
+Within-cave block gap Mg/Ca     CatBoost    All features (re-run)     46      0.958       1.8574                  NaN         NaN                     NaN
+Within-cave block gap Mg/Ca     CatBoost   Without 21-kyr sin/cos     46      0.961       1.7880                0.003       22/46                  0.6571
+Within-cave block gap Mg/Ca     CatBoost Without interpolated age     46      0.813       3.8936               -0.144       30/46                  0.0093
+Within-cave block gap Mg/Ca     CatBoost  Without any age feature     46      0.847       3.5209               -0.110       24/46                  0.4415
+Within-cave block gap Sr/Ca RandomForest    All features (re-run)     46      0.981       0.0706                  NaN         NaN                     NaN
+Within-cave block gap Sr/Ca RandomForest   Without 21-kyr sin/cos     46      0.967       0.0918               -0.013       30/46                  0.0712
+Within-cave block gap Sr/Ca RandomForest Without interpolated age     46      0.981       0.0693                0.001       21/46                  0.9914
+Within-cave block gap Sr/Ca RandomForest  Without any age feature     46      0.842       0.2020               -0.139       30/46                  0.0044
+Within-cave block gap  d13C     CatBoost    All features (re-run)     46      0.917       0.8834                  NaN         NaN                     NaN
+Within-cave block gap  d13C     CatBoost   Without 21-kyr sin/cos     46      0.922       0.8575                0.005       19/46                  0.5087
+Within-cave block gap  d13C     CatBoost Without interpolated age     46      0.911       0.9196               -0.007       27/46                  0.2318
+Within-cave block gap  d13C     CatBoost  Without any age feature     46      0.782       1.4363               -0.136       23/46                  0.2071
+Within-cave block gap  d18O RandomForest    All features (re-run)     46      0.971       0.5103                  NaN         NaN                     NaN
+Within-cave block gap  d18O RandomForest   Without 21-kyr sin/cos     46      0.970       0.5151               -0.001       23/46                  0.2679
+Within-cave block gap  d18O RandomForest Without interpolated age     46      0.968       0.5311               -0.002       33/46                  0.0035
+Within-cave block gap  d18O RandomForest  Without any age feature     46      0.965       0.5571               -0.006       28/46                  0.0100
+
+### table S_gap_duration
+Proxy                Model  Blocks  ρ duration–RMSE     p  ρ duration–nRMSE    p   partial ρ (| samples in gap)   p    ρ duration–(model − LI nRMSE)  p   
+ δ¹⁸O                   RF      46             0.31 0.034             -0.16 0.274                         -0.11 0.482                           0.18 0.229
+ δ¹⁸O              XGBoost      46             0.18 0.236             -0.23 0.119                         -0.22 0.151                          -0.01 0.948
+ δ¹⁸O             CatBoost      46             0.19 0.204             -0.34 0.020                         -0.32 0.031                           0.05 0.747
+ δ¹⁸O Linear interpolation      46              NaN   NaN             -0.23 0.120                           NaN   NaN                            NaN   NaN
+ δ¹³C                   RF      46             0.26 0.076             -0.22 0.147                         -0.15 0.315                          -0.20 0.177
+ δ¹³C              XGBoost      46             0.29 0.052             -0.08 0.611                         -0.02 0.906                          -0.02 0.876
+ δ¹³C             CatBoost      46             0.26 0.084             -0.14 0.341                         -0.08 0.586                          -0.07 0.667
+ δ¹³C Linear interpolation      46              NaN   NaN              0.01 0.926                           NaN   NaN                            NaN   NaN
+Mg/Ca                   RF      46            -0.01 0.970             -0.03 0.836                          0.05 0.729                           0.02 0.906
+Mg/Ca              XGBoost      46             0.02 0.892             -0.00 0.985                          0.05 0.739                           0.15 0.325
+Mg/Ca             CatBoost      46             0.10 0.502              0.16 0.301                          0.21 0.154                           0.26 0.084
+Mg/Ca Linear interpolation      46              NaN   NaN             -0.14 0.346                           NaN   NaN                            NaN   NaN
+Sr/Ca                   RF      46             0.05 0.727              0.11 0.479                          0.07 0.631                           0.13 0.390
+Sr/Ca              XGBoost      46             0.11 0.487              0.12 0.411                          0.10 0.495                           0.11 0.451
+Sr/Ca             CatBoost      46             0.06 0.714             -0.06 0.687                         -0.03 0.840                          -0.05 0.719
+Sr/Ca Linear interpolation      46              NaN   NaN              0.07 0.623                           NaN   NaN                            NaN   NaN
+
+### table S_abrupt_change
+Proxy    Model                 Stratified by  Third  Blocks Range (× record SD)  Median nRMSE model  Median nRMSE LI  Model better (%)  Wilcoxon p
+ δ¹⁸O CatBoost  Departure from linear bridge    Low      16           0.22–0.62                0.56             0.49                31       0.130
+ δ¹⁸O CatBoost  Departure from linear bridge Middle      14           0.63–0.97                0.91             0.86                36       0.296
+ δ¹⁸O CatBoost  Departure from linear bridge   High      16           1.02–1.80                1.08             1.19                56       0.298
+ δ¹⁸O CatBoost Step between bounding samples    Low      15           0.02–0.45                0.83             0.63                40       0.934
+ δ¹⁸O CatBoost Step between bounding samples Middle      15           0.53–1.04                0.92             1.09                47       0.890
+ δ¹⁸O CatBoost Step between bounding samples   High      16           1.07–3.68                0.88             0.82                38       0.597
+ δ¹³C CatBoost  Departure from linear bridge    Low      15           0.24–0.64                0.58             0.53                40       0.389
+ δ¹³C CatBoost  Departure from linear bridge Middle      15           0.67–0.91                0.81             0.75                40       0.252
+ δ¹³C CatBoost  Departure from linear bridge   High      16           0.95–2.09                1.15             1.18                62       0.175
+ δ¹³C CatBoost Step between bounding samples    Low      15           0.00–0.42                0.93             0.91                53       0.524
+ δ¹³C CatBoost Step between bounding samples Middle      16           0.42–0.89                0.72             0.64                44       0.433
+ δ¹³C CatBoost Step between bounding samples   High      15           0.96–2.44                0.96             0.76                47       0.847
+Mg/Ca CatBoost  Departure from linear bridge    Low      15           0.23–0.60                0.52             0.40                33       0.064
+Mg/Ca CatBoost  Departure from linear bridge Middle      15           0.64–0.95                1.12             0.81                33       0.055
+Mg/Ca CatBoost  Departure from linear bridge   High      16           0.97–2.46                1.22             1.32                69       0.860
+Mg/Ca CatBoost Step between bounding samples    Low      15           0.03–0.48                0.84             0.88                60       0.762
+Mg/Ca CatBoost Step between bounding samples Middle      15           0.49–1.07                0.81             0.79                27       0.041
+Mg/Ca CatBoost Step between bounding samples   High      16           1.12–2.95                1.26             1.00                50       0.130
+Sr/Ca  XGBoost  Departure from linear bridge    Low      16           0.26–0.74                0.54             0.55                25       0.093
+Sr/Ca  XGBoost  Departure from linear bridge Middle      14           0.74–1.02                0.71             0.90                71       0.173
+Sr/Ca  XGBoost  Departure from linear bridge   High      16           1.04–2.02                0.94             1.24                62       0.323
+Sr/Ca  XGBoost Step between bounding samples    Low      15           0.05–0.37                0.76             0.82                53       0.639
+Sr/Ca  XGBoost Step between bounding samples Middle      15           0.45–1.44                0.50             0.98                47       0.359
+Sr/Ca  XGBoost Step between bounding samples   High      16           1.55–3.80                0.73             0.93                56       0.940
+
+### table S_interval_coverage
+Proxy                                                   Interval  Coverage (%)  Mean width  Mean tree SD / RMSE  Records with coverage ≥ 90 (%)  Lowest record coverage (%)
+ δ¹⁸O RF tree spread, production model (in-sample; as submitted)          72.8       0.883                  NaN                             NaN                         NaN
+ δ¹⁸O                  RF tree spread, fold models (out-of-fold)          71.8       1.092                 0.55                             NaN                         NaN
+ δ¹⁸O                            Cross-conformal around CatBoost          94.8       1.843                  NaN                            83.0                        53.7
+ δ¹⁸O                Cross-conformal around linear interpolation          94.3       2.196                  NaN                            89.0                        40.0
+ δ¹³C RF tree spread, production model (in-sample; as submitted)          60.1       1.008                  NaN                             NaN                         NaN
+ δ¹³C                  RF tree spread, fold models (out-of-fold)          58.9       1.491                 0.42                             NaN                         NaN
+ δ¹³C                            Cross-conformal around CatBoost          94.9       3.869                  NaN                            83.0                        24.4
+ δ¹³C                Cross-conformal around linear interpolation          94.8       3.799                  NaN                            87.0                        22.0
+Mg/Ca RF tree spread, production model (in-sample; as submitted)          92.1       4.444                  NaN                             NaN                         NaN
+Mg/Ca                  RF tree spread, fold models (out-of-fold)          91.2       5.560                 0.58                             NaN                         NaN
+Mg/Ca                            Cross-conformal around CatBoost          94.8       7.872                  NaN                            80.0                        23.3
+Mg/Ca                Cross-conformal around linear interpolation          94.7       8.538                  NaN                            80.0                        33.3
+Sr/Ca RF tree spread, production model (in-sample; as submitted)          99.8       0.048                  NaN                             NaN                         NaN
+Sr/Ca                  RF tree spread, fold models (out-of-fold)          80.8       0.065                 0.23                             NaN                         NaN
+Sr/Ca                             Cross-conformal around XGBoost          94.4       0.244                  NaN                            85.0                        39.7
+Sr/Ca                Cross-conformal around linear interpolation          94.1       0.274                  NaN                            87.0                        34.2
+
+### table S_representativeness
+                      Variable          Cohort median (IQR)    Other sites median (IQR)  KS D  p (KS or χ²)  Other sites within cohort range (%)
+                  Latitude (°)          36.5 (18.3 to 43.4)         30.7 (-4.3 to 40.8)  0.22         0.043                                 90.4
+         Absolute latitude (°)          36.5 (31.5 to 43.4)         33.6 (20.1 to 42.1)  0.25         0.019                                 89.8
+                 Elevation (m)       367.0 (121.0 to 650.0)     503.5 (200.0 to 1145.0)  0.20         0.081                                 97.5
+          Youngest age (yr BP)    1552.1 (-41.5 to 13766.0)    811.7 (-46.0 to 10407.2)  0.10         0.791                                 93.4
+            Oldest age (yr BP) 23135.0 (3792.9 to 116103.3) 13528.8 (6299.0 to 83842.5)  0.13         0.511                                 95.9
+              Record span (yr)  11754.0 (2532.6 to 63959.1)  9964.4 (3432.0 to 37331.1)  0.15         0.318                                 97.2
+               Median δ¹⁸O (‰)          -5.4 (-7.7 to -4.2)         -6.2 (-8.3 to -4.5)  0.20         0.081                                 94.8
+               Median δ¹³C (‰)          -6.9 (-9.0 to -5.6)         -7.2 (-9.0 to -4.8)  0.10         0.856                                 88.8
+  Mean annual temperature (°C)           15.0 (9.2 to 18.2)          14.7 (9.8 to 21.9)  0.11         0.705                                 96.0
+Mean annual precipitation (mm)      893.0 (665.0 to 1195.0)     959.5 (642.0 to 1435.5)  0.19         0.123                                 91.7
+          Latitude band: polar                 0 sites (0%)                6 sites (2%)   NaN         0.057                                  NaN
+    Latitude band: subtropical                6 sites (15%)              85 sites (26%)   NaN         0.057                                  NaN
+      Latitude band: temperate               27 sites (66%)             142 sites (44%)   NaN         0.057                                  NaN
+       Latitude band: tropical                8 sites (20%)              91 sites (28%)   NaN         0.057                                  NaN
+                 Hemisphere: N               33 sites (80%)             241 sites (74%)   NaN         0.509                                  NaN
+                 Hemisphere: S                8 sites (20%)              83 sites (26%)   NaN         0.509                                  NaN
+             Continent: Africa                 1 sites (2%)               29 sites (9%)   NaN         0.254                                  NaN
+               Continent: Asia               11 sites (27%)             101 sites (31%)   NaN         0.254                                  NaN
+             Continent: Europe               15 sites (37%)              89 sites (27%)   NaN         0.254                                  NaN
+      Continent: North America                7 sites (17%)              43 sites (13%)   NaN         0.254                                  NaN
+            Continent: Oceania                6 sites (15%)              31 sites (10%)   NaN         0.254                                  NaN
+      Continent: South America                 1 sites (2%)              31 sites (10%)   NaN         0.254                                  NaN
+
+### files written
+  tables/S_representativeness.csv
+  tables/S_feature_ablation.csv
+  tables/S_gap_duration.csv
+  tables/S_abrupt_change.csv
+  tables/S_hiatus_centred_blocks.csv
+  tables/S_interval_coverage.csv
+  tables/S_check_table2_LI_versions.csv
+  tables/S_check_model_vs_LI_tests.csv
+  tables/S_check_tuned_params.csv
+  Supplementary_Tables.xlsx
+  figures/S_fig_cohort_map.png / .pdf
+  figures/S_fig_error_vs_duration.png / .pdf
+  figures/S_fig_error_vs_departure.png / .pdf
+  figures/S_fig_hiatus_blocks.png / .pdf
+  figures/S_fig_feature_ablation.png / .pdf
+  figures/S_fig_interval_coverage.png / .pdf
+  figures/Figure6_revised.png / .pdf
+  tables/Figure6_panel_details.csv
+  wcbg_heldout_blocks.csv

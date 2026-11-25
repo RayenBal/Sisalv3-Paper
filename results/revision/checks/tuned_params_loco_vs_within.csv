@@ -1,0 +1,13 @@
+model,target,identical,differences
+RandomForest,d18O,True,-
+RandomForest,d13C,True,-
+RandomForest,Mg/Ca,True,-
+RandomForest,Sr/Ca,True,-
+XGBoost,d18O,True,-
+XGBoost,d13C,True,-
+XGBoost,Mg/Ca,True,-
+XGBoost,Sr/Ca,True,-
+CatBoost,d18O,True,-
+CatBoost,d13C,True,-
+CatBoost,Mg/Ca,True,-
+CatBoost,Sr/Ca,True,-

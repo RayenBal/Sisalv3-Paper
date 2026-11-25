@@ -1,0 +1,13 @@
+{
+  "model": "CatBoost",
+  "target": "Sr_Ca_measurement",
+  "best_neg_rmse": -0.2861146370075078,
+  "best_rmse": 0.2861146370075078,
+  "best_params": {
+    "estimator__learning_rate": 0.08,
+    "estimator__l2_leaf_reg": 3.0,
+    "estimator__iterations": 400,
+    "estimator__depth": 4
+  },
+  "n_halving_rounds": 3
+}

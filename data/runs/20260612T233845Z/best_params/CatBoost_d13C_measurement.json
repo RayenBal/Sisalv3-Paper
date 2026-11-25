@@ -1,0 +1,13 @@
+{
+  "model": "CatBoost",
+  "target": "d13C_measurement",
+  "best_neg_rmse": -3.393403530474982,
+  "best_rmse": 3.393403530474982,
+  "best_params": {
+    "estimator__learning_rate": 0.02,
+    "estimator__l2_leaf_reg": 3.0,
+    "estimator__iterations": 900,
+    "estimator__depth": 10
+  },
+  "n_halving_rounds": 3
+}

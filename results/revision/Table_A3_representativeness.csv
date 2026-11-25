@@ -1,0 +1,23 @@
+Variable,Cohort median (IQR),Other sites median (IQR),KS D,p (KS or χ²),Other sites within cohort range (%)
+Latitude (°),36.5 (18.3 to 43.4),30.7 (-4.3 to 40.8),0.22,0.043,90.4
+Absolute latitude (°),36.5 (31.5 to 43.4),33.6 (20.1 to 42.1),0.25,0.019,89.8
+Elevation (m),367.0 (121.0 to 650.0),503.5 (200.0 to 1145.0),0.2,0.081,97.5
+Youngest age (yr BP),1552.1 (-41.5 to 13766.0),811.7 (-46.0 to 10407.2),0.1,0.791,93.4
+Oldest age (yr BP),23135.0 (3792.9 to 116103.3),13528.8 (6299.0 to 83842.5),0.13,0.511,95.9
+Record span (yr),11754.0 (2532.6 to 63959.1),9964.4 (3432.0 to 37331.1),0.15,0.318,97.2
+Median δ¹⁸O (‰),-5.4 (-7.7 to -4.2),-6.2 (-8.3 to -4.5),0.2,0.081,94.8
+Median δ¹³C (‰),-6.9 (-9.0 to -5.6),-7.2 (-9.0 to -4.8),0.1,0.856,88.8
+Mean annual temperature (°C),15.0 (9.2 to 18.2),14.7 (9.8 to 21.9),0.11,0.705,96.0
+Mean annual precipitation (mm),893.0 (665.0 to 1195.0),959.5 (642.0 to 1435.5),0.19,0.123,91.7
+Latitude band: polar,0 sites (0%),6 sites (2%),,0.057,
+Latitude band: subtropical,6 sites (15%),85 sites (26%),,0.057,
+Latitude band: temperate,27 sites (66%),142 sites (44%),,0.057,
+Latitude band: tropical,8 sites (20%),91 sites (28%),,0.057,
+Hemisphere: N,33 sites (80%),241 sites (74%),,0.509,
+Hemisphere: S,8 sites (20%),83 sites (26%),,0.509,
+Continent: Africa,1 sites (2%),29 sites (9%),,0.254,
+Continent: Asia,11 sites (27%),101 sites (31%),,0.254,
+Continent: Europe,15 sites (37%),89 sites (27%),,0.254,
+Continent: North America,7 sites (17%),43 sites (13%),,0.254,
+Continent: Oceania,6 sites (15%),31 sites (10%),,0.254,
+Continent: South America,1 sites (2%),31 sites (10%),,0.254,

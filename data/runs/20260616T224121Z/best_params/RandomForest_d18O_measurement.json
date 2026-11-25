@@ -1,0 +1,14 @@
+{
+  "model": "RandomForest",
+  "target": "d18O_measurement",
+  "best_neg_rmse": -2.3056387680708084,
+  "best_rmse": 2.3056387680708084,
+  "best_params": {
+    "estimator__n_estimators": 400,
+    "estimator__min_samples_split": 10,
+    "estimator__min_samples_leaf": 1,
+    "estimator__max_features": "sqrt",
+    "estimator__max_depth": 8
+  },
+  "n_halving_rounds": 3
+}

@@ -1,0 +1,17 @@
+Proxy,Interval,Coverage (%),Mean width,Mean tree SD / RMSE,Records with coverage ≥ 90 (%),Lowest record coverage (%)
+δ¹⁸O,"RF tree spread, production model (in-sample; as submitted)",72.8,0.883,,,
+δ¹⁸O,"RF tree spread, fold models (out-of-fold)",71.8,1.092,0.55,,
+δ¹⁸O,Cross-conformal around CatBoost,94.8,1.843,,83.0,53.7
+δ¹⁸O,Cross-conformal around linear interpolation,94.3,2.196,,89.0,40.0
+δ¹³C,"RF tree spread, production model (in-sample; as submitted)",60.1,1.008,,,
+δ¹³C,"RF tree spread, fold models (out-of-fold)",58.9,1.491,0.42,,
+δ¹³C,Cross-conformal around CatBoost,94.9,3.869,,83.0,24.4
+δ¹³C,Cross-conformal around linear interpolation,94.8,3.799,,87.0,22.0
+Mg/Ca,"RF tree spread, production model (in-sample; as submitted)",92.1,4.444,,,
+Mg/Ca,"RF tree spread, fold models (out-of-fold)",91.2,5.56,0.58,,
+Mg/Ca,Cross-conformal around CatBoost,94.8,7.872,,80.0,23.3
+Mg/Ca,Cross-conformal around linear interpolation,94.7,8.538,,80.0,33.3
+Sr/Ca,"RF tree spread, production model (in-sample; as submitted)",99.8,0.048,,,
+Sr/Ca,"RF tree spread, fold models (out-of-fold)",80.8,0.065,0.23,,
+Sr/Ca,Cross-conformal around XGBoost,94.4,0.244,,85.0,39.7
+Sr/Ca,Cross-conformal around linear interpolation,94.1,0.274,,87.0,34.2

@@ -1,0 +1,17 @@
+proxy,method,n,R2,RMSE,RMSE_IQR,MAE,MdAE
+δ¹⁸O,"Model (CatBoost), all samples [Table 2 model row]",2098,0.977,0.449,0.26–0.52,0.335,0.253
+δ¹⁸O,LI by sample order [published R² source],2098,0.969,0.526,0.23–0.50,0.362,0.236
+δ¹⁸O,LI against depth [published RMSE/MAE/MdAE/tests source],2033,0.976,0.469,0.23–0.49,0.332,0.228
+δ¹⁸O,"LI against age, all samples [PROPOSED single LI row]",2098,0.968,0.531,0.25–0.50,0.364,0.242
+δ¹³C,"Model (CatBoost), all samples [Table 2 model row]",2098,0.917,0.888,0.47–0.97,0.602,0.401
+δ¹³C,LI by sample order [published R² source],2098,0.915,0.899,0.39–0.94,0.636,0.448
+δ¹³C,LI against depth [published RMSE/MAE/MdAE/tests source],2033,0.917,0.897,0.38–0.94,0.632,0.437
+δ¹³C,"LI against age, all samples [PROPOSED single LI row]",2098,0.915,0.894,0.39–0.91,0.624,0.429
+Mg/Ca,"Model (CatBoost), all samples [Table 2 model row]",2098,0.958,1.839,0.23–1.65,0.968,0.342
+Mg/Ca,LI by sample order [published R² source],2098,0.956,1.889,0.12–1.48,0.897,0.232
+Mg/Ca,LI against depth [published RMSE/MAE/MdAE/tests source],2033,0.951,1.866,0.12–1.40,0.859,0.214
+Mg/Ca,"LI against age, all samples [PROPOSED single LI row]",2098,0.956,1.897,0.14–1.92,0.91,0.245
+Sr/Ca,"Model (XGBoost), all samples [Table 2 model row]",2098,0.987,0.058,0.00–0.02,0.023,0.004
+Sr/Ca,LI by sample order [published R² source],2098,0.979,0.074,0.00–0.02,0.027,0.005
+Sr/Ca,LI against depth [published RMSE/MAE/MdAE/tests source],2033,0.98,0.072,0.00–0.02,0.025,0.005
+Sr/Ca,"LI against age, all samples [PROPOSED single LI row]",2098,0.982,0.069,0.00–0.02,0.025,0.005

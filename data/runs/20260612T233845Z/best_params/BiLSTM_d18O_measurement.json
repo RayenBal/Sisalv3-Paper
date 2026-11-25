@@ -1,0 +1,66 @@
+{
+  "model": "BiLSTM",
+  "target": "d18O_measurement",
+  "best_rmse": 2.2141458214645016,
+  "best_params": {
+    "units": 32,
+    "n_layers": 1,
+    "dropout": 0.2
+  },
+  "history": [
+    {
+      "k": 0,
+      "params": {
+        "units": 64,
+        "n_layers": 2,
+        "dropout": 0.1
+      },
+      "rmse": 2.4175499960591194
+    },
+    {
+      "k": 1,
+      "params": {
+        "units": 64,
+        "n_layers": 2,
+        "dropout": 0.2
+      },
+      "rmse": 2.429904585302424
+    },
+    {
+      "k": 2,
+      "params": {
+        "units": 128,
+        "n_layers": 2,
+        "dropout": 0.2
+      },
+      "rmse": 2.4506437472985847
+    },
+    {
+      "k": 3,
+      "params": {
+        "units": 128,
+        "n_layers": 2,
+        "dropout": 0.1
+      },
+      "rmse": 2.4357885797735404
+    },
+    {
+      "k": 4,
+      "params": {
+        "units": 64,
+        "n_layers": 1,
+        "dropout": 0.2
+      },
+      "rmse": 2.3123084721501903
+    },
+    {
+      "k": 5,
+      "params": {
+        "units": 32,
+        "n_layers": 1,
+        "dropout": 0.2
+      },
+      "rmse": 2.2141458214645016
+    }
+  ]
+}

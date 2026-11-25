@@ -1,0 +1,17 @@
+{
+  "model": "XGBoost",
+  "target": "d18O_measurement",
+  "best_neg_rmse": -2.3706411084362653,
+  "best_rmse": 2.3706411084362653,
+  "best_params": {
+    "estimator__subsample": 0.8,
+    "estimator__reg_lambda": 0.5,
+    "estimator__reg_alpha": 0.0,
+    "estimator__n_estimators": 300,
+    "estimator__min_child_weight": 3,
+    "estimator__max_depth": 12,
+    "estimator__learning_rate": 0.12,
+    "estimator__colsample_bytree": 0.6
+  },
+  "n_halving_rounds": 3
+}

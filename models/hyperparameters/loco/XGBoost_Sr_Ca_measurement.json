@@ -1,0 +1,17 @@
+{
+  "model": "XGBoost",
+  "target": "Sr_Ca_measurement",
+  "best_neg_rmse": -0.3678351752830504,
+  "best_rmse": 0.3678351752830504,
+  "best_params": {
+    "estimator__subsample": 0.8,
+    "estimator__reg_lambda": 2.0,
+    "estimator__reg_alpha": 0.1,
+    "estimator__n_estimators": 1200,
+    "estimator__min_child_weight": 3,
+    "estimator__max_depth": 10,
+    "estimator__learning_rate": 0.08,
+    "estimator__colsample_bytree": 0.6
+  },
+  "n_halving_rounds": 3
+}

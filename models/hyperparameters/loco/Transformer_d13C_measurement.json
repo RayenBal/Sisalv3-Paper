@@ -1,0 +1,13 @@
+{
+  "model": "Transformer",
+  "target": "d13C_measurement",
+  "best_params": {
+    "d_model": 128,
+    "n_heads": 4,
+    "ff_dim": 256,
+    "n_layers": 1
+  },
+  "best_rmse": NaN,
+  "best_neg_rmse": NaN,
+  "arch_reused_from": "d18O_measurement"
+}

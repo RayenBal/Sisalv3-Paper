@@ -1,0 +1,73 @@
+{
+  "model": "Transformer",
+  "target": "d18O_measurement",
+  "best_rmse": 2.5879425942136947,
+  "best_params": {
+    "d_model": 64,
+    "n_heads": 4,
+    "ff_dim": 256,
+    "n_layers": 1
+  },
+  "history": [
+    {
+      "k": 0,
+      "params": {
+        "d_model": 128,
+        "n_heads": 2,
+        "ff_dim": 128,
+        "n_layers": 1
+      },
+      "rmse": 2.608448738543792
+    },
+    {
+      "k": 1,
+      "params": {
+        "d_model": 128,
+        "n_heads": 2,
+        "ff_dim": 128,
+        "n_layers": 2
+      },
+      "rmse": 2.6653575994548286
+    },
+    {
+      "k": 2,
+      "params": {
+        "d_model": 128,
+        "n_heads": 4,
+        "ff_dim": 256,
+        "n_layers": 1
+      },
+      "rmse": 2.6608781961203207
+    },
+    {
+      "k": 3,
+      "params": {
+        "d_model": 128,
+        "n_heads": 4,
+        "ff_dim": 128,
+        "n_layers": 2
+      },
+      "rmse": 2.6757202960632234
+    },
+    {
+      "k": 4,
+      "params": {
+        "d_model": 64,
+        "n_heads": 4,
+        "ff_dim": 256,
+        "n_layers": 1
+      },
+      "rmse": 2.5879425942136947
+    },
+    {
+      "k": 5,
+      "params": {
+        "d_model": 64,
+        "n_heads": 2,
+        "ff_dim": 128,
+        "n_layers": 1
+      },
+      "rmse": 2.696039753659044
+    }
+  ]
+}

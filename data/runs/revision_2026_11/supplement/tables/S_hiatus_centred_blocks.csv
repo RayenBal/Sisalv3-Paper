@@ -1,0 +1,53 @@
+Proxy,Model,Site,Entity,Hiatus depth (mm),Block samples,Interval between bounding samples (yr),Step at hiatus (× SD),Median step at random positions (× SD),nRMSE model,nRMSE LI
+d18O,CatBoost,Kesang cave,17,46.5,55,19504.834,2.459,0.278,0.614,1.1
+d18O,CatBoost,Kesang cave,17,67.3,55,20953.189,1.335,0.28,0.602,0.686
+d18O,CatBoost,Kesang cave,17,100.1,55,13947.563,2.159,0.271,0.706,0.663
+d18O,CatBoost,Villars cave,32,123.0,30,51851.0,0.255,0.261,0.624,0.411
+d18O,CatBoost,Villars cave,32,472.0,30,43104.0,2.773,0.561,3.28,3.645
+d18O,CatBoost,Kinderlinskaya cave,290,198.25,30,1523.0,0.111,0.182,0.263,0.415
+d18O,CatBoost,Jersey cave,575,8.1,30,45582.764,2.762,0.274,1.183,0.876
+d18O,CatBoost,Bunker cave,596,139.36,101,4276.07,1.314,0.321,1.406,0.876
+d18O,CatBoost,Santo Tomas cave,608,62.45,148,6405.0,0.053,0.144,0.722,0.838
+d18O,CatBoost,Cueva Rosa,751,380.0,30,11343.249,0.037,0.351,1.053,0.623
+d18O,CatBoost,Hüttenbläserschachthöhle,784,68.51,34,1403.97,0.382,0.544,0.817,1.093
+d18O,CatBoost,La Vallina,804,751.0,30,35832.071,0.389,0.31,0.878,0.638
+d18O,CatBoost,Larga cave,812,1449.0,188,7359.8,0.795,0.297,1.103,0.998
+d13C,CatBoost,Kesang cave,17,46.5,55,19504.834,1.95,0.327,0.728,1.01
+d13C,CatBoost,Kesang cave,17,67.3,55,20953.189,1.745,0.309,0.988,0.571
+d13C,CatBoost,Kesang cave,17,100.1,55,13947.563,1.938,0.313,0.372,0.666
+d13C,CatBoost,Villars cave,32,123.0,30,51851.0,1.026,0.388,1.347,0.761
+d13C,CatBoost,Villars cave,32,472.0,30,43104.0,0.35,0.41,1.143,0.893
+d13C,CatBoost,Kinderlinskaya cave,290,198.25,30,1523.0,2.019,0.428,1.099,1.289
+d13C,CatBoost,Jersey cave,575,8.1,30,45582.764,0.55,0.525,0.987,0.933
+d13C,CatBoost,Bunker cave,596,139.36,101,4276.07,0.289,0.289,1.685,1.476
+d13C,CatBoost,Santo Tomas cave,608,62.45,148,6405.0,0.402,0.206,0.798,0.772
+d13C,CatBoost,Cueva Rosa,751,380.0,30,11343.249,0.232,0.438,2.149,0.977
+d13C,CatBoost,Hüttenbläserschachthöhle,784,68.51,34,1403.97,0.775,0.398,0.727,0.724
+d13C,CatBoost,La Vallina,804,751.0,30,35832.071,1.556,0.547,1.239,0.809
+d13C,CatBoost,Larga cave,812,1449.0,188,7359.8,0.182,0.321,1.204,1.504
+Mg/Ca,CatBoost,Kesang cave,17,46.5,55,19504.834,2.301,0.181,2.497,0.7
+Mg/Ca,CatBoost,Kesang cave,17,67.3,55,20953.189,0.855,0.185,1.435,1.251
+Mg/Ca,CatBoost,Kesang cave,17,100.1,55,13947.563,1.353,0.17,0.513,0.391
+Mg/Ca,CatBoost,Villars cave,32,123.0,30,51851.0,0.177,0.25,4.295,0.737
+Mg/Ca,CatBoost,Villars cave,32,472.0,30,43104.0,0.037,0.26,2.499,0.994
+Mg/Ca,CatBoost,Kinderlinskaya cave,290,198.25,30,1523.0,0.177,0.265,0.412,0.575
+Mg/Ca,CatBoost,Jersey cave,575,8.1,30,45582.764,0.811,0.284,2.657,0.697
+Mg/Ca,CatBoost,Bunker cave,596,139.36,101,4276.07,0.803,0.151,0.303,0.35
+Mg/Ca,CatBoost,Santo Tomas cave,608,62.45,148,6405.0,0.072,0.222,1.031,1.177
+Mg/Ca,CatBoost,Cueva Rosa,751,380.0,30,11343.249,0.631,0.312,0.679,0.44
+Mg/Ca,CatBoost,Hüttenbläserschachthöhle,784,68.51,34,1403.97,0.003,0.181,0.498,0.643
+Mg/Ca,CatBoost,La Vallina,804,751.0,30,35832.071,0.196,0.298,1.319,0.567
+Mg/Ca,CatBoost,Larga cave,812,1449.0,188,7359.8,0.315,0.381,1.665,1.249
+Sr/Ca,XGBoost,Kesang cave,17,46.5,55,19504.834,0.019,0.143,1.08,1.719
+Sr/Ca,XGBoost,Kesang cave,17,67.3,55,20953.189,0.017,0.149,1.375,1.16
+Sr/Ca,XGBoost,Kesang cave,17,100.1,55,13947.563,0.414,0.142,0.613,0.54
+Sr/Ca,XGBoost,Villars cave,32,123.0,30,51851.0,0.631,0.514,1.247,0.979
+Sr/Ca,XGBoost,Villars cave,32,472.0,30,43104.0,0.671,0.57,2.306,2.489
+Sr/Ca,XGBoost,Kinderlinskaya cave,290,198.25,30,1523.0,0.538,0.209,0.64,0.683
+Sr/Ca,XGBoost,Jersey cave,575,8.1,30,45582.764,2.286,0.564,1.351,0.732
+Sr/Ca,XGBoost,Bunker cave,596,139.36,101,4276.07,1.677,0.358,0.913,1.011
+Sr/Ca,XGBoost,Santo Tomas cave,608,62.45,148,6405.0,1.382,0.288,0.789,0.849
+Sr/Ca,XGBoost,Cueva Rosa,751,380.0,30,11343.249,3.738,0.673,1.846,1.776
+Sr/Ca,XGBoost,Hüttenbläserschachthöhle,784,68.51,34,1403.97,0.103,0.317,0.315,0.807
+Sr/Ca,XGBoost,La Vallina,804,751.0,30,35832.071,1.366,0.754,0.973,1.113
+Sr/Ca,XGBoost,Larga cave,812,1449.0,188,7359.8,0.031,0.4,0.673,1.313

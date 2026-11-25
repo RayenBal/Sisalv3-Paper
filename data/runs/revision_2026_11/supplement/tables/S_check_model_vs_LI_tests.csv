@@ -1,0 +1,9 @@
+proxy,model,li,n_blocks,model_wins,wilcoxon_p,wilcoxon_p_bonf,normalised_p_bonf,tost_p_bonf,equivalent_at_20pct
+δ¹⁸O,CatBoost,depth [published],45,20/45,0.4948,1.0,0.9008,0.0225,True
+δ¹⁸O,CatBoost,age [proposed],46,19/46,0.6808,1.0,1.0,0.0107,True
+δ¹³C,CatBoost,depth [published],45,21/45,0.4737,1.0,1.0,0.0003,True
+δ¹³C,CatBoost,age [proposed],46,22/46,0.7619,1.0,1.0,0.0001,True
+Mg/Ca,CatBoost,depth [published],45,19/45,0.5991,1.0,0.0156,0.3331,False
+Mg/Ca,CatBoost,age [proposed],46,21/46,0.7784,1.0,0.0487,0.2485,False
+Sr/Ca,XGBoost,depth [published],45,25/45,0.2296,0.9183,1.0,0.7891,False
+Sr/Ca,XGBoost,age [proposed],46,24/46,0.3738,1.0,1.0,0.5264,False

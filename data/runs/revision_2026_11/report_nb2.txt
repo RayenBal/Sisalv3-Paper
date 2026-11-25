@@ -1,0 +1,64 @@
+====================================================================================================
+SISAL REVISION — FEATURE ABLATION REPORT (notebook 2/2)
+generated: 2026-11-14 23:18:14.321347+00:00
+targets run: ['d18O', 'd13C', 'Mg/Ca', 'Sr/Ca'] | tiers: [1, 2] | protocols: {1: ['LOCO', 'WCBG'], 2: ['LOCO']} | CatBoost GPU: True | MAX_FOLDS: None
+interp_age used by production models: 12/12
+====================================================================================================
+
+### ablation_summary
+protocol target        model       variant  n_folds  pooled_r2  pooled_rmse  published_r2  delta_r2_vs_full folds_worse_than_full  wilcoxon_p_fold_rmse
+    LOCO  Mg/Ca     CatBoost          full       41     -0.483      11.4768        -0.553               NaN                   NaN                   NaN
+    LOCO  Mg/Ca     CatBoost  no_harmonics       41     -0.461      11.3877           NaN             0.023                 21/41                0.9285
+    LOCO  Mg/Ca     CatBoost no_interp_age       41     -0.513      11.5912           NaN            -0.030                  9/41                0.0015
+    LOCO  Mg/Ca     CatBoost        no_age       41     -0.470      11.4235           NaN             0.014                 12/41                0.0079
+    LOCO  Mg/Ca     CatBoost           p19       41     -0.488      11.4933           NaN            -0.004                 16/41                0.5294
+    LOCO  Mg/Ca     CatBoost           p23       41     -0.467      11.4141           NaN             0.016                 16/41                0.3479
+    LOCO  Mg/Ca     CatBoost           p41       41     -0.545      11.7130           NaN            -0.062                 17/41                0.2796
+    LOCO  Mg/Ca     CatBoost          p100       41     -0.618      11.9845           NaN            -0.134                 24/41                0.5210
+    LOCO  Sr/Ca RandomForest          full       41      0.545       0.3344         0.564               NaN                   NaN                   NaN
+    LOCO  Sr/Ca RandomForest  no_harmonics       41      0.557       0.3302           NaN             0.011                 25/41                0.4881
+    LOCO  Sr/Ca RandomForest no_interp_age       41      0.503       0.3495           NaN            -0.042                 22/41                0.8677
+    LOCO  Sr/Ca RandomForest        no_age       41      0.488       0.3547           NaN            -0.057                 22/41                0.8576
+    LOCO  Sr/Ca RandomForest           p19       41      0.559       0.3292           NaN             0.014                 23/41                0.8677
+    LOCO  Sr/Ca RandomForest           p23       41      0.544       0.3347           NaN            -0.001                 25/41                0.3964
+    LOCO  Sr/Ca RandomForest           p41       41      0.529       0.3403           NaN            -0.016                 22/41                0.6721
+    LOCO  Sr/Ca RandomForest          p100       41      0.550       0.3326           NaN             0.005                 22/41                0.5900
+    LOCO   d13C     CatBoost          full       41      0.129       2.9068         0.182               NaN                   NaN                   NaN
+    LOCO   d13C     CatBoost  no_harmonics       41      0.101       2.9515           NaN            -0.027                 20/41                0.7486
+    LOCO   d13C     CatBoost no_interp_age       41      0.112       2.9337           NaN            -0.016                 24/41                0.4333
+    LOCO   d13C     CatBoost        no_age       41      0.164       2.8475           NaN             0.035                 21/41                0.9183
+    LOCO   d13C     CatBoost           p19       41      0.117       2.9260           NaN            -0.012                 26/41                0.2739
+    LOCO   d13C     CatBoost           p23       41      0.152       2.8682           NaN             0.023                 23/41                0.9387
+    LOCO   d13C     CatBoost           p41       41      0.124       2.9148           NaN            -0.005                 24/41                0.8778
+    LOCO   d13C     CatBoost          p100       41      0.136       2.8943           NaN             0.007                 20/41                0.5723
+    LOCO   d18O RandomForest          full       41      0.516       2.0487         0.516               NaN                   NaN                   NaN
+    LOCO   d18O RandomForest  no_harmonics       41      0.505       2.0726           NaN            -0.011                 21/41                0.7486
+    LOCO   d18O RandomForest no_interp_age       41      0.479       2.1264           NaN            -0.037                 19/41                0.8175
+    LOCO   d18O RandomForest        no_age       41      0.485       2.1135           NaN            -0.031                 19/41                0.7292
+    LOCO   d18O RandomForest           p19       41      0.518       2.0451           NaN             0.002                 18/41                0.2411
+    LOCO   d18O RandomForest           p23       41      0.502       2.0798           NaN            -0.015                 15/41                0.1714
+    LOCO   d18O RandomForest           p41       41      0.521       2.0385           NaN             0.005                 20/41                0.4563
+    LOCO   d18O RandomForest          p100       41      0.521       2.0378           NaN             0.005                 20/41                0.8475
+    WCBG  Mg/Ca     CatBoost          full       46      0.958       1.8574         0.958               NaN                   NaN                   NaN
+    WCBG  Mg/Ca     CatBoost  no_harmonics       46      0.961       1.7880           NaN             0.003                 22/46                0.6571
+    WCBG  Mg/Ca     CatBoost no_interp_age       46      0.813       3.8936           NaN            -0.144                 30/46                0.0093
+    WCBG  Mg/Ca     CatBoost        no_age       46      0.847       3.5209           NaN            -0.110                 24/46                0.4415
+    WCBG  Sr/Ca RandomForest          full       46      0.981       0.0706         0.981               NaN                   NaN                   NaN
+    WCBG  Sr/Ca RandomForest  no_harmonics       46      0.967       0.0918           NaN            -0.013                 30/46                0.0712
+    WCBG  Sr/Ca RandomForest no_interp_age       46      0.981       0.0693           NaN             0.001                 21/46                0.9914
+    WCBG  Sr/Ca RandomForest        no_age       46      0.842       0.2020           NaN            -0.139                 30/46                0.0044
+    WCBG   d13C     CatBoost          full       46      0.917       0.8834         0.917               NaN                   NaN                   NaN
+    WCBG   d13C     CatBoost  no_harmonics       46      0.922       0.8575           NaN             0.005                 19/46                0.5087
+    WCBG   d13C     CatBoost no_interp_age       46      0.911       0.9196           NaN            -0.007                 27/46                0.2318
+    WCBG   d13C     CatBoost        no_age       46      0.782       1.4363           NaN            -0.136                 23/46                0.2071
+    WCBG   d18O RandomForest          full       46      0.971       0.5103         0.971               NaN                   NaN                   NaN
+    WCBG   d18O RandomForest  no_harmonics       46      0.970       0.5151           NaN            -0.001                 23/46                0.2679
+    WCBG   d18O RandomForest no_interp_age       46      0.968       0.5311           NaN            -0.002                 33/46                0.0035
+    WCBG   d18O RandomForest        no_age       46      0.965       0.5571           NaN            -0.006                 28/46                0.0100
+
+### production_model_age_feature_importance
+target        model  rank_interp_age  share_interp_age  share_age_sin_cos                                                         top5
+  d18O RandomForest               20             0.014              0.008    precip_d18o_bw02, wc_bio4, wc_bio8, wc_bio1, abs_latitude
+  d13C     CatBoost                2             0.172              0.115 wc_bio5, interp_age, age_cos, log_depth_sample, depth_sample
+ Mg/Ca     CatBoost                4             0.077              0.048             wc_bio4, wc_bio2, wc_bio14, interp_age, wc_bio19
+ Sr/Ca RandomForest                4             0.030              0.040                 elevation, cat_7, cat_0, interp_age, age_sin

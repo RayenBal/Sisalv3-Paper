@@ -1,0 +1,14 @@
+{
+  "model": "RandomForest",
+  "target": "d13C_measurement",
+  "best_neg_rmse": -3.1919335059068636,
+  "best_rmse": 3.1919335059068636,
+  "best_params": {
+    "estimator__n_estimators": 800,
+    "estimator__min_samples_split": 2,
+    "estimator__min_samples_leaf": 2,
+    "estimator__max_features": 1.0,
+    "estimator__max_depth": 8
+  },
+  "n_halving_rounds": 3
+}

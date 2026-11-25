@@ -1,0 +1,13 @@
+{
+  "model": "CatBoost",
+  "target": "d18O_measurement",
+  "best_neg_rmse": -2.3423030719447056,
+  "best_rmse": 2.3423030719447056,
+  "best_params": {
+    "estimator__learning_rate": 0.12,
+    "estimator__l2_leaf_reg": 9.0,
+    "estimator__iterations": 400,
+    "estimator__depth": 6
+  },
+  "n_halving_rounds": 3
+}

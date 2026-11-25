@@ -1,0 +1,12 @@
+{
+  "model": "BiLSTM",
+  "target": "Sr_Ca_measurement",
+  "best_params": {
+    "units": 32,
+    "n_layers": 1,
+    "dropout": 0.2
+  },
+  "best_rmse": NaN,
+  "best_neg_rmse": NaN,
+  "arch_reused_from": "d18O_measurement"
+}

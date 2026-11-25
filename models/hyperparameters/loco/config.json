@@ -1,0 +1,181 @@
+{
+  "targets": [
+    "d18O_measurement",
+    "d13C_measurement",
+    "Mg_Ca_measurement",
+    "Sr_Ca_measurement"
+  ],
+  "numeric_features": [
+    "latitude",
+    "longitude",
+    "elevation",
+    "depth_sample",
+    "interp_age",
+    "P_Ca_measurement",
+    "U_Ca_measurement",
+    "Ba_Ca_measurement",
+    "age_sin",
+    "age_cos",
+    "log_depth_sample",
+    "precip_d18o_bw02",
+    "abs_latitude",
+    "wc_bio1",
+    "wc_bio2",
+    "wc_bio3",
+    "wc_bio4",
+    "wc_bio5",
+    "wc_bio6",
+    "wc_bio7",
+    "wc_bio8",
+    "wc_bio9",
+    "wc_bio10",
+    "wc_bio11",
+    "wc_bio12",
+    "wc_bio13",
+    "wc_bio14",
+    "wc_bio15",
+    "wc_bio16",
+    "wc_bio17",
+    "wc_bio18",
+    "wc_bio19"
+  ],
+  "nominal_features": [
+    "mineralogy",
+    "monitoring",
+    "hemisphere",
+    "lat_band"
+  ],
+  "id_columns": [
+    "site_id",
+    "entity_id",
+    "sample_id"
+  ],
+  "max_target_missing_frac": 0.3,
+  "require_all_four_targets_present": true,
+  "min_samples_per_site": 20,
+  "mad_outlier_threshold": 3.0,
+  "cyclical_period_kyr": 21.0,
+  "high_corr_drop_threshold": 0.95,
+  "inner_cv_groupkfold_splits": 5,
+  "block_gap_fraction": 0.1,
+  "block_gap_min_samples": 30,
+  "min_entity_length_for_blockgap": 80,
+  "rf_param_distributions": {
+    "estimator__n_estimators": [
+      200,
+      400,
+      600,
+      800
+    ],
+    "estimator__max_depth": [
+      null,
+      8,
+      12,
+      16,
+      24
+    ],
+    "estimator__min_samples_split": [
+      2,
+      5,
+      10
+    ],
+    "estimator__min_samples_leaf": [
+      1,
+      2,
+      4
+    ],
+    "estimator__max_features": [
+      "sqrt",
+      0.5,
+      1.0
+    ]
+  },
+  "xgb_param_distributions": {
+    "estimator__n_estimators": [
+      300,
+      500,
+      800,
+      1200
+    ],
+    "estimator__max_depth": [
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "estimator__learning_rate": [
+      0.02,
+      0.05,
+      0.08,
+      0.12
+    ],
+    "estimator__subsample": [
+      0.6,
+      0.8,
+      1.0
+    ],
+    "estimator__colsample_bytree": [
+      0.6,
+      0.8,
+      1.0
+    ],
+    "estimator__reg_alpha": [
+      0.0,
+      0.01,
+      0.1
+    ],
+    "estimator__reg_lambda": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "estimator__min_child_weight": [
+      1,
+      3,
+      5
+    ]
+  },
+  "n_random_search_iter": 20,
+  "sequence_length": 10,
+  "sequence_stride": 1,
+  "bilstm_units_grid": [
+    32,
+    64,
+    128
+  ],
+  "bilstm_dropout_grid": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "bilstm_layers_grid": [
+    1,
+    2
+  ],
+  "transformer_dmodel_grid": [
+    64,
+    128
+  ],
+  "transformer_heads_grid": [
+    2,
+    4
+  ],
+  "transformer_ff_grid": [
+    128,
+    256
+  ],
+  "transformer_layers_grid": [
+    1,
+    2
+  ],
+  "dl_batch_size": 64,
+  "dl_max_epochs": 60,
+  "dl_early_stop_patience": 8,
+  "dl_n_random_search_iter": 6,
+  "bootstrap_resamples": 500,
+  "permutation_n_iter": 50,
+  "permutation_only_best_per_target": true,
+  "random_seed": 42,
+  "fast_mode": false
+}

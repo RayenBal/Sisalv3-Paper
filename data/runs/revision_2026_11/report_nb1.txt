@@ -1,0 +1,237 @@
+====================================================================================================
+SISAL REVISION ANALYSES — REPORT (notebook 1/2)
+generated: 2026-11-14 10:37:02.725423+00:00
+MAX_FOLDS = None  (None = full run)
+====================================================================================================
+
+### interp_age_is_predictor_in_production_models
+12/12
+
+### 1_block_reconstruction_check
+       model target  folds  samples  non_contiguous  edge_blocks  pooled_r2  published_r2  li_age_rmse  li_idx_rmse  li_n  published_li_rmse
+    CatBoost  Mg/Ca     46     2098               0            0      0.958         0.958        1.897        1.889  2098              1.866
+    CatBoost  Sr/Ca     46     2098               0            0      0.985         0.985        0.069        0.074  2098              0.072
+    CatBoost   d13C     46     2098               0            0      0.917         0.917        0.894        0.899  2098              0.897
+    CatBoost   d18O     46     2098               0            0      0.977         0.977        0.531        0.526  2098              0.469
+RandomForest  Mg/Ca     46     2098               0            0      0.925         0.925        1.897        1.889  2098              1.866
+RandomForest  Sr/Ca     46     2098               0            0      0.981         0.981        0.069        0.074  2098              0.072
+RandomForest   d13C     46     2098               0            0      0.913         0.913        0.894        0.899  2098              0.897
+RandomForest   d18O     46     2098               0            0      0.971         0.971        0.531        0.526  2098              0.469
+     XGBoost  Mg/Ca     46     2098               0            0      0.941         0.941        1.897        1.889  2098              1.866
+     XGBoost  Sr/Ca     46     2098               0            0      0.987         0.987        0.069        0.074  2098              0.072
+     XGBoost   d13C     46     2098               0            0      0.906         0.906        0.894        0.899  2098              0.897
+     XGBoost   d18O     46     2098               0            0      0.974         0.974        0.531        0.526  2098              0.469
+
+### 2_duration_correlations
+target        model  n_blocks  dur_median_yr  dur_min_yr  dur_max_yr  rho_dur_RMSE  p_RMSE  rho_dur_nRMSE_model  p_model  rho_partial_on_n  p_partial  rho_dur_nRMSE_LI  p_LI  rho_dur_model_minus_LI  p_diff
+  d18O RandomForest        46            486          19       43071          0.31   0.034                -0.16    0.274             -0.11      0.482             -0.23 0.120                    0.18   0.229
+  d18O      XGBoost        46            486          19       43071          0.18   0.236                -0.23    0.119             -0.22      0.151             -0.23 0.120                   -0.01   0.948
+  d18O     CatBoost        46            486          19       43071          0.19   0.204                -0.34    0.020             -0.32      0.031             -0.23 0.120                    0.05   0.747
+  d13C RandomForest        46            486          19       43071          0.26   0.076                -0.22    0.147             -0.15      0.315              0.01 0.926                   -0.20   0.177
+  d13C      XGBoost        46            486          19       43071          0.29   0.052                -0.08    0.611             -0.02      0.906              0.01 0.926                   -0.02   0.876
+  d13C     CatBoost        46            486          19       43071          0.26   0.084                -0.14    0.341             -0.08      0.586              0.01 0.926                   -0.07   0.667
+ Mg/Ca RandomForest        46            486          19       43071         -0.01   0.970                -0.03    0.836              0.05      0.729             -0.14 0.346                    0.02   0.906
+ Mg/Ca      XGBoost        46            486          19       43071          0.02   0.892                -0.00    0.985              0.05      0.739             -0.14 0.346                    0.15   0.325
+ Mg/Ca     CatBoost        46            486          19       43071          0.10   0.502                 0.16    0.301              0.21      0.154             -0.14 0.346                    0.26   0.084
+ Sr/Ca RandomForest        46            486          19       43071          0.05   0.727                 0.11    0.479              0.07      0.631              0.07 0.623                    0.13   0.390
+ Sr/Ca      XGBoost        46            486          19       43071          0.11   0.487                 0.12    0.411              0.10      0.495              0.07 0.623                    0.11   0.451
+ Sr/Ca     CatBoost        46            486          19       43071          0.06   0.714                -0.06    0.687             -0.03      0.840              0.07 0.623                   -0.05   0.719
+
+### 2_duration_tertiles_bestWCBG
+target    model tertile  n_blocks dur_range_yr  nRMSE_model_med  nRMSE_LI_med  RMSE_model_pooled  RMSE_LI_pooled  model_better_frac
+  d18O CatBoost   short        15       19-204             1.00          1.02              0.432           0.461               0.40
+  d18O CatBoost  medium        15     216-1402             0.85          0.62              0.333           0.307               0.33
+  d18O CatBoost    long        16   1427-43071             0.66          0.75              0.550           0.718               0.50
+  d13C CatBoost   short        15       19-204             1.00          0.88              0.770           0.718               0.47
+  d13C CatBoost  medium        15     216-1402             0.64          0.61              0.564           0.631               0.53
+  d13C CatBoost    long        16   1427-43071             0.86          0.77              1.176           1.174               0.44
+ Mg/Ca CatBoost   short        15       19-204             0.81          0.88              1.327           1.814               0.47
+ Mg/Ca CatBoost  medium        15     216-1402             1.17          0.79              1.330           1.511               0.53
+ Mg/Ca CatBoost    long        16   1427-43071             1.11          0.65              2.447           2.264               0.38
+ Sr/Ca  XGBoost   short        15       19-204             0.75          0.93              0.058           0.064               0.53
+ Sr/Ca  XGBoost  medium        15     216-1402             0.64          0.85              0.033           0.061               0.53
+ Sr/Ca  XGBoost    long        16   1427-43071             0.74          0.90              0.076           0.077               0.50
+
+### 2_harmonics_identifiability
+Entities whose age span < 21 kyr (sin/cos pair is a one-to-one function of interp_age): 46/59; samples in such entities: 64.3%
+
+### 3a_abrupt_change_strata
+target    model stratify_by tertile  n_blocks     range  nRMSE_model_med  nRMSE_LI_med  model_better_frac  wilcoxon_p  rho_departure_nRMSE_model
+  d18O CatBoost   departure     low        16 0.22-0.62             0.56          0.49               0.31       0.130                       0.65
+  d18O CatBoost   departure     mid        14 0.63-0.97             0.91          0.86               0.36       0.296                       0.65
+  d18O CatBoost   departure    high        16 1.02-1.80             1.08          1.19               0.56       0.298                       0.65
+  d18O CatBoost        step     low        15 0.02-0.45             0.83          0.63               0.40       0.934                       0.65
+  d18O CatBoost        step     mid        15 0.53-1.04             0.92          1.09               0.47       0.890                       0.65
+  d18O CatBoost        step    high        16 1.07-3.68             0.88          0.82               0.38       0.597                       0.65
+  d13C CatBoost   departure     low        15 0.24-0.64             0.58          0.53               0.40       0.389                       0.71
+  d13C CatBoost   departure     mid        15 0.67-0.91             0.81          0.75               0.40       0.252                       0.71
+  d13C CatBoost   departure    high        16 0.95-2.09             1.15          1.18               0.62       0.175                       0.71
+  d13C CatBoost        step     low        15 0.00-0.42             0.93          0.91               0.53       0.524                       0.71
+  d13C CatBoost        step     mid        16 0.42-0.89             0.72          0.64               0.44       0.433                       0.71
+  d13C CatBoost        step    high        15 0.96-2.44             0.96          0.76               0.47       0.847                       0.71
+ Mg/Ca CatBoost   departure     low        15 0.23-0.60             0.52          0.40               0.33       0.064                       0.54
+ Mg/Ca CatBoost   departure     mid        15 0.64-0.95             1.12          0.81               0.33       0.055                       0.54
+ Mg/Ca CatBoost   departure    high        16 0.97-2.46             1.22          1.32               0.69       0.860                       0.54
+ Mg/Ca CatBoost        step     low        15 0.03-0.48             0.84          0.88               0.60       0.762                       0.54
+ Mg/Ca CatBoost        step     mid        15 0.49-1.07             0.81          0.79               0.27       0.041                       0.54
+ Mg/Ca CatBoost        step    high        16 1.12-2.95             1.26          1.00               0.50       0.130                       0.54
+ Sr/Ca  XGBoost   departure     low        16 0.26-0.74             0.54          0.55               0.25       0.093                       0.51
+ Sr/Ca  XGBoost   departure     mid        14 0.74-1.02             0.71          0.90               0.71       0.173                       0.51
+ Sr/Ca  XGBoost   departure    high        16 1.04-2.02             0.94          1.24               0.62       0.323                       0.51
+ Sr/Ca  XGBoost        step     low        15 0.05-0.37             0.76          0.82               0.53       0.639                       0.51
+ Sr/Ca  XGBoost        step     mid        15 0.45-1.44             0.50          0.98               0.47       0.359                       0.51
+ Sr/Ca  XGBoost        step    high        16 1.55-3.80             0.73          0.93               0.56       0.940                       0.51
+
+### 3b_hiatus_in_wcbg_blocks
+Cohort entities with >=1 SISAL hiatus: 20/59. WCBG blocks spanning a hiatus (per target): Mg/Ca: 5, Sr/Ca: 5, d13C: 5, d18O: 5
+
+### 3c_hiatus_centred_blocks
+target    model  n_hiatus_blocks  nRMSE_model_hiatus_med  nRMSE_LI_hiatus_med  model_better_frac  wilcoxon_model_vs_LI_p  nRMSE_model_random_blocks_med  mannwhitney_hiatus_vs_random_p  step_at_hiatus_med  step_random_pos_med
+  d18O CatBoost               13                    0.82                 0.84               0.46                   0.787                           0.88                           0.641                0.79                 0.28
+  d13C CatBoost               13                    1.10                 0.89               0.31                   0.244                           0.83                           0.084                0.78                 0.39
+ Mg/Ca CatBoost               13                    1.32                 0.70               0.31                   0.021                           0.99                           0.590                0.31                 0.25
+ Sr/Ca  XGBoost               13                    0.97                 1.01               0.62                   0.497                           0.73                           0.131                0.63                 0.36
+
+### 3c_hiatus_centred_detail
+target    model  entity_id                site_name  hiatus_depth   n  duration_yr  nrmse_model  nrmse_li_age  step_at_hiatus  step_random_median
+  d18O CatBoost         17              Kesang cave         46.50  55    19504.834        0.614         1.100           2.459               0.278
+  d18O CatBoost         17              Kesang cave         67.30  55    20953.189        0.602         0.686           1.335               0.280
+  d18O CatBoost         17              Kesang cave        100.10  55    13947.563        0.706         0.663           2.159               0.271
+  d18O CatBoost         32             Villars cave        123.00  30    51851.000        0.624         0.411           0.255               0.261
+  d18O CatBoost         32             Villars cave        472.00  30    43104.000        3.280         3.645           2.773               0.561
+  d18O CatBoost        290      Kinderlinskaya cave        198.25  30     1523.000        0.263         0.415           0.111               0.182
+  d18O CatBoost        575              Jersey cave          8.10  30    45582.764        1.183         0.876           2.762               0.274
+  d18O CatBoost        596              Bunker cave        139.36 101     4276.070        1.406         0.876           1.314               0.321
+  d18O CatBoost        608         Santo Tomas cave         62.45 148     6405.000        0.722         0.838           0.053               0.144
+  d18O CatBoost        751               Cueva Rosa        380.00  30    11343.249        1.053         0.623           0.037               0.351
+  d18O CatBoost        784 Hüttenbläserschachthöhle         68.51  34     1403.970        0.817         1.093           0.382               0.544
+  d18O CatBoost        804               La Vallina        751.00  30    35832.071        0.878         0.638           0.389               0.310
+  d18O CatBoost        812               Larga cave       1449.00 188     7359.800        1.103         0.998           0.795               0.297
+  d13C CatBoost         17              Kesang cave         46.50  55    19504.834        0.728         1.010           1.950               0.327
+  d13C CatBoost         17              Kesang cave         67.30  55    20953.189        0.988         0.571           1.745               0.309
+  d13C CatBoost         17              Kesang cave        100.10  55    13947.563        0.372         0.666           1.938               0.313
+  d13C CatBoost         32             Villars cave        123.00  30    51851.000        1.347         0.761           1.026               0.388
+  d13C CatBoost         32             Villars cave        472.00  30    43104.000        1.143         0.893           0.350               0.410
+  d13C CatBoost        290      Kinderlinskaya cave        198.25  30     1523.000        1.099         1.289           2.019               0.428
+  d13C CatBoost        575              Jersey cave          8.10  30    45582.764        0.987         0.933           0.550               0.525
+  d13C CatBoost        596              Bunker cave        139.36 101     4276.070        1.685         1.476           0.289               0.289
+  d13C CatBoost        608         Santo Tomas cave         62.45 148     6405.000        0.798         0.772           0.402               0.206
+  d13C CatBoost        751               Cueva Rosa        380.00  30    11343.249        2.149         0.977           0.232               0.438
+  d13C CatBoost        784 Hüttenbläserschachthöhle         68.51  34     1403.970        0.727         0.724           0.775               0.398
+  d13C CatBoost        804               La Vallina        751.00  30    35832.071        1.239         0.809           1.556               0.547
+  d13C CatBoost        812               Larga cave       1449.00 188     7359.800        1.204         1.504           0.182               0.321
+ Mg/Ca CatBoost         17              Kesang cave         46.50  55    19504.834        2.497         0.700           2.301               0.181
+ Mg/Ca CatBoost         17              Kesang cave         67.30  55    20953.189        1.435         1.251           0.855               0.185
+ Mg/Ca CatBoost         17              Kesang cave        100.10  55    13947.563        0.513         0.391           1.353               0.170
+ Mg/Ca CatBoost         32             Villars cave        123.00  30    51851.000        4.295         0.737           0.177               0.250
+ Mg/Ca CatBoost         32             Villars cave        472.00  30    43104.000        2.499         0.994           0.037               0.260
+ Mg/Ca CatBoost        290      Kinderlinskaya cave        198.25  30     1523.000        0.412         0.575           0.177               0.265
+ Mg/Ca CatBoost        575              Jersey cave          8.10  30    45582.764        2.657         0.697           0.811               0.284
+ Mg/Ca CatBoost        596              Bunker cave        139.36 101     4276.070        0.303         0.350           0.803               0.151
+ Mg/Ca CatBoost        608         Santo Tomas cave         62.45 148     6405.000        1.031         1.177           0.072               0.222
+ Mg/Ca CatBoost        751               Cueva Rosa        380.00  30    11343.249        0.679         0.440           0.631               0.312
+ Mg/Ca CatBoost        784 Hüttenbläserschachthöhle         68.51  34     1403.970        0.498         0.643           0.003               0.181
+ Mg/Ca CatBoost        804               La Vallina        751.00  30    35832.071        1.319         0.567           0.196               0.298
+ Mg/Ca CatBoost        812               Larga cave       1449.00 188     7359.800        1.665         1.249           0.315               0.381
+ Sr/Ca  XGBoost         17              Kesang cave         46.50  55    19504.834        1.080         1.719           0.019               0.143
+ Sr/Ca  XGBoost         17              Kesang cave         67.30  55    20953.189        1.375         1.160           0.017               0.149
+ Sr/Ca  XGBoost         17              Kesang cave        100.10  55    13947.563        0.613         0.540           0.414               0.142
+ Sr/Ca  XGBoost         32             Villars cave        123.00  30    51851.000        1.247         0.979           0.631               0.514
+ Sr/Ca  XGBoost         32             Villars cave        472.00  30    43104.000        2.306         2.489           0.671               0.570
+ Sr/Ca  XGBoost        290      Kinderlinskaya cave        198.25  30     1523.000        0.640         0.683           0.538               0.209
+ Sr/Ca  XGBoost        575              Jersey cave          8.10  30    45582.764        1.351         0.732           2.286               0.564
+ Sr/Ca  XGBoost        596              Bunker cave        139.36 101     4276.070        0.913         1.011           1.677               0.358
+ Sr/Ca  XGBoost        608         Santo Tomas cave         62.45 148     6405.000        0.789         0.849           1.382               0.288
+ Sr/Ca  XGBoost        751               Cueva Rosa        380.00  30    11343.249        1.846         1.776           3.738               0.673
+ Sr/Ca  XGBoost        784 Hüttenbläserschachthöhle         68.51  34     1403.970        0.315         0.807           0.103               0.317
+ Sr/Ca  XGBoost        804               La Vallina        751.00  30    35832.071        0.973         1.113           1.366               0.754
+ Sr/Ca  XGBoost        812               Larga cave       1449.00 188     7359.800        0.673         1.313           0.031               0.400
+
+### 4b_oof_refit_check
+target    n  max_abs_diff_vs_saved_pred  corr_vs_saved_pred
+  d18O 2098                3.552714e-15            1.000000
+  d13C 2098                6.217249e-15            1.000000
+ Mg/Ca 2098                2.131628e-14            1.000000
+ Sr/Ca 2098                4.065950e-02            0.999985
+
+### 4ab_tree_spread_coverage
+target                                                 interval  coverage  mean_width  mean_sd_over_rmse  rf_max_depth rf_max_features  rf_n_estimators  rf_min_samples_leaf
+  d18O RF tree spread, production model (in-sample) [published]      72.8       0.883               0.55           8.0            sqrt            400.0                  1.0
+  d13C RF tree spread, production model (in-sample) [published]      60.1       1.008               0.39           8.0             1.0            800.0                  2.0
+ Mg/Ca RF tree spread, production model (in-sample) [published]      92.1       4.444               0.61           8.0            sqrt            400.0                  1.0
+ Sr/Ca RF tree spread, production model (in-sample) [published]      99.8       0.048               0.51           NaN             1.0            100.0                  1.0
+  d18O                 RF tree spread, fold model (out-of-fold)      71.8       1.092               0.55           NaN             NaN              NaN                  NaN
+  d13C                 RF tree spread, fold model (out-of-fold)      58.9       1.491               0.42           NaN             NaN              NaN                  NaN
+ Mg/Ca                 RF tree spread, fold model (out-of-fold)      91.2       5.560               0.58           NaN             NaN              NaN                  NaN
+ Sr/Ca                 RF tree spread, fold model (out-of-fold)      80.8       0.065               0.23           NaN             NaN              NaN                  NaN
+
+### 4c_cross_conformal_coverage
+target                                          interval  coverage  mean_width  median_width  entity_cov_q25  entity_cov_min
+  d18O           Cross-conformal, RandomForest, unscaled      94.6       2.015         2.013            95.2            36.4
+  d18O   Cross-conformal, RandomForest, entity-SD scaled      95.0       2.003         1.780            93.1            53.3
+  d18O                Cross-conformal, XGBoost, unscaled      94.7       2.049         2.048            96.7            36.7
+  d18O        Cross-conformal, XGBoost, entity-SD scaled      94.8       2.060         1.829            93.3            30.0
+  d18O               Cross-conformal, CatBoost, unscaled      94.8       1.843         1.853            94.2            53.7
+  d18O       Cross-conformal, CatBoost, entity-SD scaled      94.9       1.959         1.748            93.3            56.1
+  d18O         Cross-conformal, linear interp., unscaled      94.3       2.196         2.206            96.7            40.0
+  d18O Cross-conformal, linear interp., entity-SD scaled      94.9       2.078         1.847            93.3            56.7
+  d13C           Cross-conformal, RandomForest, unscaled      95.0       3.776         3.779            96.7            17.1
+  d13C   Cross-conformal, RandomForest, entity-SD scaled      95.0       3.330         3.297            96.7            24.4
+  d13C                Cross-conformal, XGBoost, unscaled      94.8       3.971         3.973            96.9            19.5
+  d13C        Cross-conformal, XGBoost, entity-SD scaled      94.9       3.709         3.679            90.8            41.5
+  d13C               Cross-conformal, CatBoost, unscaled      94.9       3.869         3.820            97.7            24.4
+  d13C       Cross-conformal, CatBoost, entity-SD scaled      94.8       3.454         3.446            93.3            26.8
+  d13C         Cross-conformal, linear interp., unscaled      94.8       3.799         3.795            96.9            22.0
+  d13C Cross-conformal, linear interp., entity-SD scaled      94.9       3.602         3.609            93.7            34.1
+ Mg/Ca           Cross-conformal, RandomForest, unscaled      94.6      10.093        10.052            99.5             0.0
+ Mg/Ca   Cross-conformal, RandomForest, entity-SD scaled      94.3      60.501        28.183           100.0             0.0
+ Mg/Ca                Cross-conformal, XGBoost, unscaled      93.9      11.320        11.377           100.0            10.0
+ Mg/Ca        Cross-conformal, XGBoost, entity-SD scaled      94.1      19.929         9.358           100.0             0.0
+ Mg/Ca               Cross-conformal, CatBoost, unscaled      94.8       7.872         7.802            97.8            23.3
+ Mg/Ca       Cross-conformal, CatBoost, entity-SD scaled      94.5      14.229         6.627           100.0             0.0
+ Mg/Ca         Cross-conformal, linear interp., unscaled      94.7       8.538         8.464            95.4            33.3
+ Mg/Ca Cross-conformal, linear interp., entity-SD scaled      94.8       6.392         2.986            90.8            43.3
+ Sr/Ca           Cross-conformal, RandomForest, unscaled      94.1       0.290         0.293           100.0            17.8
+ Sr/Ca   Cross-conformal, RandomForest, entity-SD scaled      94.8       0.143         0.022            94.6            63.3
+ Sr/Ca                Cross-conformal, XGBoost, unscaled      94.4       0.244         0.245           100.0            39.7
+ Sr/Ca        Cross-conformal, XGBoost, entity-SD scaled      95.0       0.229         0.037           100.0             3.3
+ Sr/Ca               Cross-conformal, CatBoost, unscaled      94.0       0.259         0.261           100.0            35.9
+ Sr/Ca       Cross-conformal, CatBoost, entity-SD scaled      94.5       0.436         0.067           100.0             0.0
+ Sr/Ca         Cross-conformal, linear interp., unscaled      94.1       0.274         0.277           100.0            34.2
+ Sr/Ca Cross-conformal, linear interp., entity-SD scaled      94.9       0.178         0.027            90.2            43.3
+
+### 5_counts
+  sisal_sites_total: 365
+  sites_with_isotopes: 365
+  sites_with_MgCa: 54
+  sites_with_SrCa: 49
+  sites_with_samples_having_all4: 43
+  cohort_sites: 41
+
+### 5_numeric_comparison
+   variable  cohort_median      cohort_IQR  other_median      other_IQR  KS_D  KS_p  other_within_cohort_range_pct
+   latitude          36.53       18.3-43.4         30.73      -4.3-40.8  0.22 0.043                           90.4
+    abs_lat          36.53       31.5-43.4         33.58      20.1-42.1  0.25 0.019                           89.8
+  elevation         367.00     121.0-650.0        503.50   200.0-1145.0  0.20 0.081                           97.5
+    age_min        1552.10   -41.5-13766.0        811.71  -46.0-10407.2  0.10 0.791                           93.4
+    age_max       23135.00 3792.9-116103.3      13528.83 6299.0-83842.5  0.13 0.511                           95.9
+   age_span       11754.00  2532.6-63959.1       9964.37 3432.0-37331.1  0.15 0.318                           97.2
+d18O_median          -5.38       -7.7--4.2         -6.21      -8.3--4.5  0.20 0.081                           94.8
+d13C_median          -6.91       -9.0--5.6         -7.24      -9.0--4.8  0.10 0.856                           88.8
+      MAT_C          14.99        9.2-18.2         14.68       9.8-21.9  0.11 0.705                           96.0
+     MAP_mm         893.00    665.0-1195.0        959.50   642.0-1435.5  0.19 0.123                           91.7
+
+### 5_categorical_comparison
+  variable         level  cohort_n  cohort_pct  other_n  other_pct  chi2_p
+  lat_band      tropical         8        19.5       91       28.1   0.057
+  lat_band   subtropical         6        14.6       85       26.2   0.057
+  lat_band     temperate        27        65.9      142       43.8   0.057
+  lat_band         polar         0         0.0        6        1.9   0.057
+hemisphere             N        33        80.5      241       74.4   0.509
+hemisphere             S         8        19.5       83       25.6   0.509
+ continent        Africa         1         2.4       29        9.0   0.254
+ continent          Asia        11        26.8      101       31.2   0.254
+ continent        Europe        15        36.6       89       27.5   0.254
+ continent North America         7        17.1       43       13.3   0.254
+ continent       Oceania         6        14.6       31        9.6   0.254
+ continent South America         1         2.4       31        9.6   0.254
